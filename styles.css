@@ -72,7 +72,6 @@ select option {
   color: #0b1020;
 }
 
-/* Tarjeta del pokemon */
 #pokemon-info {
   padding: 18px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.045));
@@ -157,14 +156,11 @@ select option {
   font-family: inherit;
 }
 
-/* Separar label/valor si luego decides mejorar el JS */
-/* Mantener legibilidad con el formato actual: "stat: value" */
 #pokemon-stats li {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Pequeño hint inicial */
 #pokemon-stats:empty::after {
   content: "Elige un Pokémon para ver sus estadísticas.";
   color: var(--muted);
@@ -174,4 +170,36 @@ select option {
   font-size: 15px;
   opacity: 0.85;
 }
+
+#pokemon-abilities-title {
+  margin: 14px 0 10px;
+  font-size: 18px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+#pokemon-abilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 520px) {
+  #pokemon-abilities-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+#pokemon-abilities-list li {
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 16px;
+}
+
 
