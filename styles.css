@@ -172,7 +172,7 @@ select option {
 }
 
 #pokemon-abilities-title {
-  margin: 14px 0 10px;
+  margin: 14px 10px 10px;
   font-size: 18px;
   letter-spacing: 0.4px;
   font-weight: 400;
@@ -180,8 +180,8 @@ select option {
 
 #pokemon-abilities-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10px;
+  margin: 10px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
