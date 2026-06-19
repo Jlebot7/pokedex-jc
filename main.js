@@ -25,7 +25,7 @@ const pokemonSelected = async (pokemonUrl) => {
         const pokemonImage = document.getElementById("pokemon-image");
         const pokemonName = document.getElementById("pokemon-name");
         const pokemonStats = document.getElementById("pokemon-stats");
-        const pokemonSkills = document.getElementById("abilities");
+        const pokemonSkills = document.getElementById("pokemon-abilities");
 
         pokemonImage.src = response.sprites.front_default;
         pokemonName.textContent = response.name;
