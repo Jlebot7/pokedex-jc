@@ -28,12 +28,30 @@ const pokemonSelected = async (pokemonUrl) => {
         const pokemonName = document.getElementById("pokemon-name");
         const pokemonStats = document.getElementById("pokemon-stats");
         const pokemonSkills = pokemonAbilities;
+        const pokemonTypeBadge = document.getElementById("pokemon-type-badge");
 
         pokemonImage.src = response.sprites.front_default;
 
         pokemonName.textContent = response.name;
         pokemonStats.innerHTML = "";
         if (pokemonSkills) pokemonSkills.innerHTML = "";
+
+        if (pokemonTypeBadge) {
+            const types = response.types ?? [];
+            const map = {
+                water: "Agua",
+                flying: "Aire",
+                ground: "Tierra",
+                fire: "Fuego",
+            };
+
+            const mapped = types
+                .map(t => map[t?.type?.name])
+                .filter(Boolean);
+
+            const unique = [...new Set(mapped)];
+            pokemonTypeBadge.textContent = unique.length ? unique.join(" / ") : "";
+        }
 
 
         response.stats.forEach(stat => {

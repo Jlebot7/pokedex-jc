@@ -15,7 +15,7 @@
 <body>
     <section>
         <div>
-            <label for="pokemons">ELige tu Pokemón</label>
+            <label for="pokemons">Elige tu Pokemón</label>
             <select id="pokemons" onchange="pokemonSelected(this.value)">
             <option value="">Select a Pokemon</option>
         </select>
@@ -26,6 +26,7 @@
                 <h1 id="pokemon-name"></h1>
                 <div id="pokemon-image-wrap">
                     <img id="pokemon-image" alt="Imagen del Pokémon" />
+                    <div id="pokemon-type-badge" aria-hidden="true"></div>
                 </div>
             </div>
             <h2 id="pokemon-abilities-title">Habilidades</h2>
